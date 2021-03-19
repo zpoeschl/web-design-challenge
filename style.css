@@ -7,7 +7,7 @@
     margin-top: 10px;
   }
   
-.image {
+.img_hover {
     opacity: 1;
     display: block;
     width: 100%;
@@ -26,7 +26,7 @@
     -ms-transform: translate(-50%, -50%)
   }
   
-.container:hover .image {
+.container:hover .img_hover {
     opacity: 0.3;
   }
   
@@ -40,3 +40,7 @@
     font-size: 16px;
     padding: 16px 32px;
   }
+
+.plots {
+  text-align: center;
+}
