@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <title>Latitude HOME</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,113 +19,143 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
 <body>
+    <!-- NAVIGATION-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Latitude vs X</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="#navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- NAVIGATION-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.html">Latitude vs X</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-      aria-controls="#navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse" id="#navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparisons</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Plots</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="vis_cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="vis_humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="vis_temp.html">Temperature</a>
+                        <a class="dropdown-item" href="vis_wind.html">Windspeed</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="collapse navbar-collapse" id="#navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="data.html">Data</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Plots</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="comparisons.html">Comparison</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="vis_cloudiness.html">Cloudiness</a>
-            <a class="dropdown-item" href="vis_humidity.html">Humidity</a>
-            <a class="dropdown-item" href="vis_temp.html">Temperature</a>
-            <a class="dropdown-item" href="vis_wind.html">Windspeed</a>
-          </div>
-        </li>
-      </ul>
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="bs-component">
+                    <div class="card bg-light mb-3" style="max-width: 40rem;">
+                        <div class="card-header">Welcome!</div>
+                        <div class="card-body">
+                            <h2 class="card-title">Latitude vs X</h2>
+                            <p class="card-text">
+                                The purpose of this project was to analyze how weather changes as you get closer to the
+                                equator.
+                                To accomplish this analysis, we first pulled data from the OpenWeatherMap API to
+                                assemble a
+                                dataset
+                                of over 500 cities.
+                            </p>
+                            <p class="card-text">
+                                After assembling the dataset, we used Matplotlib to plot various aspects of the weather
+                                vs.
+                                latitude.
+                                Factors we looked at included:
+                                <a class="text-success" href="vis_cloudiness.html">cloudiness</a>,
+                                <a class="text-success" href="vis_humidity.html">humidity</a>,
+                                <a class="text-success" href="vis_temp.html">temperature</a>, and
+                                <a class="text-success" href="vis_wind.html">windspeed</a>.
+                                This site provides the source data and visualizations created as part of the analysis,
+                                as
+                                well
+                                as explanations and descriptions of any trends and correlations found.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloudiness</h5>
+                            <a href="vis_cloudiness.html">
+                                <img class="thumbnail img_hover" src="Resources/Images/lat_clouds.png"
+                                    alt="cloud chart">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Humidity</h5>
+                            <a href="vis_humidity.html">
+                                <img class="thumbnail img_hover" src="Resources/Images/lat_hum.png"
+                                    alt="humidity chart">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Temperature</h5>
+                            <a href="vis_temp.html">
+                                <img class="thumbnail img_hover" src="Resources/Images/lat_temp.png"
+                                    alt="temperature chart">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3" style="max-width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Windspeed</h5>
+                            <a href="vis_wind.html">
+                                <img class="thumbnail img_hover" src="Resources/Images/lat_wind.png"
+                                    alt="windspeed chart">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- INTRO/SUMMARY -->
-  <div class="jumbotron">
-    <h1 class="display-3">Latitude vs X</h1>
-    <h2>Summary</h2>
-    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator.
-      To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset
-      of over 500 cities.
-    </p>
-    <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
-      Factors we looked at included:
-      <a class="text-success" href="vis_cloudiness.html">cloudiness</a>,
-      <a class="text-success" href="vis_humidity.html">humidity</a>,
-      <a class="text-success" href="vis_temp.html">temperature</a>, and
-      <a class="text-success" href="vis_wind.html">windspeed</a>.
-      This site provides the source data and visualizations created as part of the analysis, as well
-      as explanations and descriptions of any trends and correlations found.
-    </p>
-  </div>
-  
-<!-- THUMBNAIL SIDENAV -->
-<div class="col-sm-3 col-sm-offset-1 sidebar-module">
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-  <!-- cloudiness thumbnail -->
-  <div class="sidebar-module">
-    <a href="vis_cloudiness.html" class="thumbnail">
-      <img class="image img_hover" src="Resources/Images/lat_clouds.png" alt="cloud chart">
-      <div class="middle">
-        <div class="text">Cloudiness</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- humidity thumbnail -->
-  <div class="sidebar-module">
-    <a href="vis_humidity.html" class="thumbnail">
-      <img class="image img_hover" src="Resources/Images/lat_hum.png" alt="humidity chart">
-      <div class="middle">
-        <div class="text">Humidity</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- temp thumbnail -->
-  <div class="sidebar-module">
-    <a href="vis_temp.html" class="thumbnail">
-      <img class="image img_hover" src="Resources/Images/lat_temp.png" alt="temperature chart">
-      <div class="middle">
-        <div class="text">Temperature</div>
-      </div>
-    </a>
-  </div>
-
-  <!-- wind speed thumbnail -->
-  <div class="sidebar-module">
-    <a href="vis_wind.html" class="thumbnail">
-      <img class="image img_hover" src="Resources/Images/lat_wind.png" alt="wind speed chart">
-      <div class="middle">
-        <div class="text">Windspeed</div>
-      </div>
-    </a>
-  </div>
-</div>
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="offcanvas.js"></script>
 </body>
+
 </html>

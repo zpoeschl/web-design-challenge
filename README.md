@@ -1,10 +1,6 @@
 # web-design-challenge
 This is the eleventh assignment for UMN Data Analytics bootcamp. All work completed by Zoe Poeschl.
 
-* Bootstrap enhancements used:
-  * [Off-Canvas example](https://getbootstrap.com/docs/3.3/examples/offcanvas/)
-  * [Bootswatch: Flatly](https://bootswatch.com/flatly/)
-
 
 # INSTRUCTIONS
 
