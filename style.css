@@ -21,3 +21,8 @@ nav {
     font-size: 16px;
     padding: 16px 32px;
   }
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
